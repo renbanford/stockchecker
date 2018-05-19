@@ -1,0 +1,10 @@
+numpy
+pandas
+datetime
+alpha_vantage
+pprint
+requests
+matplotlib
+quandl
+sklearn
+scipy

@@ -18,6 +18,7 @@ from sklearn import preprocessing, svm
 warnings.simplefilter('always', DeprecationWarning)
 
 # Input Statement #1
+print("")
 companyname2 = input(
     "What is the name of the company you'd like stock prices for? (Please input a NASDAQ stock, and if you get an error, break the program and try it again. ")
 
@@ -67,6 +68,7 @@ no = {'no', 'n'}
 
 choice = input().lower()
 if choice in yes:
+    print("")
     print("One graph, coming right up! (Close it to proceed)")
     print("")
     data, meta_data = ts.get_intraday(
@@ -142,7 +144,7 @@ if choice in yes:
         forecast_prediction = clf.predict(X_forecast)
         print("")
         plt.plot(forecast_prediction)
-        plt.ylabel('Prediction for ' + companynameupper + "/" + company +
+        plt.title('Prediction for ' + companynameupper + "/" + company +
                    "'s stock price")
         plt.show()
     else:
@@ -151,6 +153,7 @@ if choice in yes:
 elif choice in no:
     print("")
     print("Okay, goodbye!")
+    print("")
 else:
     sys.stdout.write(
         "Please start the script again, and respond with 'yes' or 'no'")
